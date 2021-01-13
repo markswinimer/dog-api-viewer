@@ -1,0 +1,88 @@
+.app {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+}
+.app-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2em;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-height: 100px;
+    padding: 1em 0;
+    border-bottom: 1px solid silver;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+}
+.title h1 {
+    margin-bottom: .15em;
+}
+nav .logo {
+    width: 40px;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: row;
+    padding: 2em 0 0 0;
+}
+.app-left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    max-width: 200px;
+    margin-right: 2em;
+}
+
+.app-right-column {
+    flex: 1;
+    flex-grow: 1;
+}
+.title .logo {
+    width: 100px;
+    margin-left: auto;
+}
+.title {
+    font-weight: 500;
+    margin-right: auto;
+    width: 100%;
+    padding: .5em;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        padding-top: 0;
+    }
+    nav .logo {
+        margin-right: 1em;
+    }
+    .app-wrapper {
+        max-width: 100%;
+        padding: 2em;
+    }
+    .app-container {
+        padding-top: 1em;
+    }
+    .app-left-column {
+        max-width: 100%;
+        margin: 0;
+    }
+    .app-right-column {
+        padding-top: 1em;
+    }
+    .app-container {
+        flex-direction: column;        
+    }
+}
+
+@media only screen and (max-width: 360px) {
+   nav .logo {
+        display: none;
+    }
+}

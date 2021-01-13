@@ -1,0 +1,49 @@
+.image-grid-component {
+    flex: 2;
+    flex-grow: 1;
+    overflow: scroll;
+}
+.image-grid-component h1 {
+    font-size: 32px;
+    font-weight: normal;
+    margin: auto;
+    margin-bottom: 1em;
+}
+.image-grid-component em {
+    font-family: "Lora";
+}
+.dog-image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.dog-image-card {
+    display: grid;
+    padding: .5em;
+}
+.dog-image-card::before {
+  content: "";
+  padding-bottom: 100%;
+  display: block;
+}
+.dog-image-card::before, .dog-image-card img {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.dog-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .dog-image-card {
+        padding: 1em 0;
+    }
+    .image-grid-component h1 {
+        margin-bottom: .25em;
+    }
+}
+
+/* Safari Height fix */
+_::-webkit-full-page-media, _:future, :root .dog-image-card {
+        height: 55vh;
+}

@@ -1,0 +1,7 @@
+{
+  "short_name": "Dog API",
+  "name": "Dog API Viewer",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff"
+}
